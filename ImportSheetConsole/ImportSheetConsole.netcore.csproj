@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ProjectGuid>{44F44DD1-F19D-4D9D-A0DE-0FD3D86A333F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImportSheetConsole</RootNamespace>
+    <AssemblyName>ImportSheetConsole</AssemblyName>
+    <BaseOutputPath>C:\Pyramid\ControlService\</BaseOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\Pyramid\ControlService\</OutputPath>
+  </PropertyGroup>
+  <Import Project="../../Netcore.targets" />
+  <ItemGroup>
+	<Reference Include="$(OutputPath)\RDMetadataGuids.dll" />
+    <Reference Include="$(OutputPath)\ObjStudioClasses.dll" />
+    <Reference Include="$(OutputPath)\GemBox.Spreadsheet.dll" />
+	<Reference Include="$(OutputPath)\BridgeTypes.dll" />
+	<Reference Include="$(OutputPath)\CSClient.dll" />
+	<Reference Include="$(OutputPath)\CommonTools.dll" />
+	<Reference Include="$(OutputPath)\CSConstants.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="System.ComponentModel.Composition" Version="4.7.0" />
+	</ItemGroup>
+</Project>
